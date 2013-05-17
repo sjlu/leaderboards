@@ -48,6 +48,27 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+if (isset($_SERVER['CLEARDB_DATABASE_URL']))
+{
+    $active_group = 'cleardb';
+
+    $db['cleardb']['hostname'] = 'us-cdbr-east-03.cleardb.com';
+    $db['cleardb']['username'] = 'b1a1ecad8ac94c';
+    $db['cleardb']['password'] = 'c68b07dc';
+    $db['cleardb']['database'] = 'heroku_fb6a901c8c26796';
+    $db['cleardb']['dbdriver'] = 'mysql';
+    $db['cleardb']['dbprefix'] = '';
+    $db['cleardb']['pconnect'] = TRUE;
+    $db['cleardb']['db_debug'] = TRUE;
+    $db['cleardb']['cache_on'] = FALSE;
+    $db['cleardb']['cachedir'] = '';
+    $db['cleardb']['char_set'] = 'utf8';
+    $db['cleardb']['dbcollat'] = 'utf8_general_ci';
+    $db['cleardb']['swap_pre'] = '';
+    $db['cleardb']['autoinit'] = TRUE;
+    $db['cleardb']['stricton'] = FALSE;
+}
+
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'root';
