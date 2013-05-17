@@ -1,5 +1,5 @@
 <?php
-require(APPPATH'.libraries/REST_Controller.php');
+require(APPPATH.'libraries/REST_Controller.php');
 
 class Api extends REST_Controller {
 
@@ -16,7 +16,8 @@ class Api extends REST_Controller {
 
 	function index_get()
 	{
-		$this->response($this->leaders->get_leaders());
+		$leaders = $this->leaders->get_leaders();
+		$this->response(array('status' => 'OK', 'data' => $leaders));
 	}
 
 	function index_post()

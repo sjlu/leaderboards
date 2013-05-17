@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 class Leaders_model extends CI_Model {
 
@@ -24,7 +24,7 @@ class Leaders_model extends CI_Model {
 
 		$query = $this->db->get('leaders');
 
-		return $query->results();
+		return $query->result_array();
 	}
 
 }

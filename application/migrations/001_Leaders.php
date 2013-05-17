@@ -1,6 +1,6 @@
 <?php
 
-class Migration_comments extends CI_Migration
+class Migration_Leaders extends CI_Migration
 {
 
 	function up()
