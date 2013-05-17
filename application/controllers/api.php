@@ -25,6 +25,8 @@ class Api extends REST_Controller {
 		$points = $this->post('points');
 
 		$this->leaders->add_leader($name, $points);
+
+		$this->response(array('status' => 'OK'));
 	}
 
 }
