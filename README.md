@@ -16,6 +16,11 @@ Run these commands and then edit [database.php](https://github.com/sjlu/leaderbo
     heroku addons:add cleardb
     heroku config
 
+## Usage
+
+* You can visit the homepage to see the leaderboard.
+* Hit the `/api` endpoint with either `GET` or `POST` to get scores or add scores.
+
 ### License
 
 MIT.
