@@ -53,9 +53,9 @@ if (isset($_SERVER['CLEARDB_DATABASE_URL']))
     $active_group = 'cleardb';
 
     $db['cleardb']['hostname'] = 'us-cdbr-east-03.cleardb.com';
-    $db['cleardb']['username'] = 'b1a1ecad8ac94c';
-    $db['cleardb']['password'] = 'c68b07dc';
-    $db['cleardb']['database'] = 'heroku_fb6a901c8c26796';
+    $db['cleardb']['username'] = 'ba064e51a89f7a';
+    $db['cleardb']['password'] = '5b8a5601';
+    $db['cleardb']['database'] = 'heroku_023f637f3571316';
     $db['cleardb']['dbdriver'] = 'mysql';
     $db['cleardb']['dbprefix'] = '';
     $db['cleardb']['pconnect'] = TRUE;
