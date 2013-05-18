@@ -17,7 +17,7 @@ class Api extends REST_Controller {
 	function index_get()
 	{
 		$leaders = $this->leaders->get_leaders();
-		$this->response(array('status' => 'OK', 'data' => $leaders));
+		return $this->response(array('status' => 'OK', 'data' => $leaders));
 	}
 
 	function index_post()
@@ -25,9 +25,12 @@ class Api extends REST_Controller {
 		$name = $this->post('name');
 		$points = $this->post('points');
 
+		if (empty($name) || empty($points))
+			return $this->response(array('status' => 'ERROR', 'reason' => 'Missing parameters.'), 400);
+
 		$this->leaders->add_leader($name, $points);
 
-		$this->response(array('status' => 'OK'));
+		return $this->response(array('status' => 'OK'));
 	}
 
 }
